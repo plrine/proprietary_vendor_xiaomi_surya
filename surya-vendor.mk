@@ -334,7 +334,6 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.vpp@1.3 \
     btaudio_offload_if \
     audio.primary.sm6150 \
-    sound_trigger.primary.sm6150 \
     vendor.qti.hardware.bluetooth_audio@2.1-impl \
     liba2dpoffload \
     libadm \
