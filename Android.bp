@@ -9677,7 +9677,6 @@ cc_prebuilt_library_shared {
                 "vendor.qti.hardware.radio.uim_remote_client@1.2",
                 "vendor.qti.hardware.radio.lpa@1.0",
                 "vendor.qti.hardware.radio.lpa@1.1",
-                "vendor.qti.hardware.radio.lpa@1.2",
                 "vendor.qti.hardware.radio.qtiradio@1.0",
                 "vendor.qti.hardware.radio.qtiradio@2.0",
                 "vendor.qti.hardware.radio.qtiradio@2.1",
@@ -9692,6 +9691,7 @@ cc_prebuilt_library_shared {
                 "android.hardware.secure_element@1.0",
                 "android.hardware.secure_element@1.1",
                 "android.hardware.secure_element@1.2",
+                "vendor.qti.hardware.radio.qcriNvOpt@1.0",
                 "vendor.qti.hardware.radio.internal.deviceinfo@1.0",
                 "libdsutils",
                 "libcutils",
@@ -12465,7 +12465,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.qti.hardware.radio.lpa@1.2",
+    name: "vendor.qti.hardware.radio.qcriNvOpt@1.0",
     owner: "xiaomi",
     strip: {
         none: true,
@@ -12473,11 +12473,9 @@ cc_prebuilt_library_shared {
     target: {
         android_arm64: {
             srcs: [
-                "proprietary/vendor/lib64/vendor.qti.hardware.radio.lpa@1.2.so",
+                "proprietary/vendor/lib64/vendor.qti.hardware.radio.qcriNvOpt@1.0.so",
             ],
             shared_libs: [
-                "vendor.qti.hardware.radio.lpa@1.0",
-                "vendor.qti.hardware.radio.lpa@1.1",
                 "libhidlbase",
                 "liblog",
                 "libutils",
@@ -13727,6 +13725,7 @@ cc_prebuilt_library_shared {
                 "libandroid",
                 "libhidlbase",
                 "vendor.qti.imsrtpservice@3.0",
+                "vendor.qti.imsrtpservice@3.1",
                 "libdiag_system",
                 "libcutils",
                 "libutils",
@@ -14114,6 +14113,35 @@ cc_prebuilt_library_shared {
                 "proprietary/system_ext/lib64/vendor.qti.imsrtpservice@3.0.so",
             ],
             shared_libs: [
+                "libhidlbase",
+                "liblog",
+                "libutils",
+                "libcutils",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    system_ext_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor.qti.imsrtpservice@3.1",
+    owner: "xiaomi",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/system_ext/lib64/vendor.qti.imsrtpservice@3.1.so",
+            ],
+            shared_libs: [
+                "vendor.qti.imsrtpservice@3.0",
                 "libhidlbase",
                 "liblog",
                 "libutils",
@@ -14638,6 +14666,7 @@ cc_prebuilt_binary {
     },
     prefer: true,
     soc_specific: true,
+    recovery_available: true,
 }
 
 cc_prebuilt_binary {
@@ -14655,6 +14684,7 @@ cc_prebuilt_binary {
                 "libhidlbase",
                 "android.hardware.bluetooth@1.0",
                 "vendor.qti.hardware.fm@1.0_vendor",
+                "com.dsi.ant@1.0",
                 "vendor.qti.hardware.bluetooth_sar@1.0",
                 "vendor.qti.hardware.bluetooth_sar@1.1",
                 "vendor.qti.hardware.btconfigstore@1.0",
