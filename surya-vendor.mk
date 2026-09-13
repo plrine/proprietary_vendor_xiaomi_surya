@@ -349,7 +349,6 @@ PRODUCT_PACKAGES += \
     libsurround_3mic_proc \
     libvppclient \
     libshoebox \
-    android.hardware.camera.provider@2.4-legacy \
     com.qti.sensor.ofilm_hi259 \
     com.qti.sensor.ofilm_imx682 \
     com.qti.sensor.ofilm_ov02b1b \
@@ -653,7 +652,6 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.bluetooth_sar@1.0 \
     vendor.qti.hardware.bluetooth_sar@1.1 \
     vendor.qti.hardware.cacert@1.0 \
-    vendor.qti.hardware.camera.device@3.5 \
     vendor.qti.hardware.data.cne.internal.api@1.0 \
     vendor.qti.hardware.data.cne.internal.constants@1.0 \
     vendor.qti.hardware.data.cne.internal.server@1.0 \
